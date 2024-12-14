@@ -154,6 +154,11 @@ button:hover::after {
     height: 32px;
 }
 
+.icons a:hover {
+    background-color: var(--blue);
+    color: white;
+}
+
 .footer>p {
     margin-top: 25px;
     font-weight: 300;
