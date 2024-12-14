@@ -1,6 +1,23 @@
 import { FaFacebookF, FaTwitter, FaInstagram } from "react-icons/fa";
+import { useState } from "react";
 
 function App() {
+  const [email, setEmail] = useState("");
+  const [error, setError] = useState("");
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    if (!email) {
+      setError("Please provide a valid email address");
+    } else if (!/\S+@\S+\.\S+/.test(email)) {
+      setError("Please check your email");
+    } else {
+      setError("");
+      console.log("Email submitted:", email);
+    }
+  };
+
   return (
     <>
       <main>
@@ -11,8 +28,18 @@ function App() {
 
         <h2>Subscribe and get notified</h2>
 
-        <form action="">
-          <input type="text" placeholder="Your email address…" />
+        <form onSubmit={handleSubmit}>
+          <div className="form-group">
+            <input
+              type="text"
+              placeholder="Your email address…"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              className={error ? "error" : ""}
+            />
+            {error && <p className="error">{error}</p>}
+          </div>
+
           <button type="submit">Notify Me</button>
         </form>
 
