@@ -1,1 +1,67 @@
-@media (max-width: 375px) {}
+@media (max-width: 650px) {
+    body {
+        padding: 80px 0px;
+    }
+
+    main {
+        width: 302px;
+        max-width: 90%;
+    }
+
+    .logo {
+        height: 20px;
+    }
+
+    .logo {
+        margin-bottom: 32px;
+    }
+
+    h1 {
+        font-size: 22px;
+        line-height: 32px;
+        margin-bottom: 16px;
+    }
+
+    h2 {
+        font-size: 12px;
+        margin-bottom: 32px;
+    }
+
+    form {
+        flex-direction: column;
+    }
+
+    form button,
+    form input,
+    .form-group {
+        width: 100%;
+    }
+
+    input {
+        font-size: 12px;
+        padding: 10px 32px;
+    }
+
+    button {
+        font-size: 12px;
+        padding: 12px;
+        line-height: 16px;
+    }
+
+    form {
+        gap: 10px;
+        margin-bottom: 72px;
+    }
+
+    .footer>p {
+        font-size: 10px;
+    }
+
+    p.error {
+        position: static;
+        margin-bottom: 20px;
+    }
+
+
+
+}
